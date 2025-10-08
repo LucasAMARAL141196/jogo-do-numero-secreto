@@ -25,6 +25,7 @@ function verificarChute() {
         let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
         exibirTextoNaTela('p', mensagemTentativas);
         document.getElementById('reiniciar').removeAttribute('disabled');
+        document.querySelector('.container__imagem-pessoa').src = './img/robot.png';
         
     } else {
         if (chute > numeroSecreto) {
@@ -64,4 +65,5 @@ function reiniciarJogo() {
     tentativas = 1;
     exibirMensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true);
+    document.querySelector('.container__imagem-pessoa').src = './img/ia.png';
 }
